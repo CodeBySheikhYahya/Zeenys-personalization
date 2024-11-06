@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zeenys Personalization</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Falling Snow Animation */
+    .falling-snow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10;
+    }
+    .falling-snow .snowflake {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: white;
+      border-radius: 50%;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+    /* Smaller Circular Reindeer Animation */
+    .reindeer {
+      position: fixed;
+      bottom: 20px;
+      left: -60px;
+      width: 50px; /* Smaller size */
+      height: 50px;
+      border-radius: 50%; /* Circular frame */
+      overflow: hidden; /* Ensures image stays within the circle */
+      animation: moveReindeer 15s linear infinite;
+      z-index: 20;
+    }
+    @keyframes moveReindeer {
+      0% { transform: translateX(-100px); }
+      50% { transform: translateX(calc(100vw + 100px)); }
+      100% { transform: translateX(-100px); }
+    }
+    /* FAQ Smooth Dropdown */
+    details summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+    details[open] summary ~ * {
+      animation: expand 0.3s ease-in-out;
+    }
+    @keyframes expand {
+      from { opacity: 0; transform: scaleY(0); }
+      to { opacity: 1; transform: scaleY(1); }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans leading-relaxed tracking-wide flex flex-col">
+
+  <!-- Falling Snow Animation -->
+  <div class="falling-snow" aria-hidden="true">
+    <div class="snowflake" style="left: 10%; animation-duration: 8s;"></div>
+    <div class="snowflake" style="left: 30%; animation-duration: 12s;"></div>
+    <div class="snowflake" style="left: 50%; animation-duration: 10s;"></div>
+  </div>
+
+  <!-- Smaller Circular Reindeer Animation -->
+  <div class="reindeer">
+    <img src="./assets/WhatsApp Image 2024-11-06 at 01.48.36_a9a23228.jpg" alt="Reindeer" class="w-full h-full object-cover">
+  </div>
+
+   <!-- Top Notification Bar with Enlarged Logo and Rounded Borders -->
+  <div class="bg-red-500 text-white p-2 text-center">
+    <div class="flex items-center justify-center">
+      <img src="./assets/Screenshot 2024-11-06 192541.png" alt="Logo" class="w-16 h-16 rounded-full border-4 border-white mr-3"> <!-- Larger size with rounded border -->
+      <p>🎄 Free Shipping on Orders Over $50! 🎄 Use code HOLIDAY20 for 20% off!</p>
+    </div>
+  </div>
+
+
+  <!-- Hero Section with Banner -->
+  <header class="bg-gradient-to-r from-red-500 to-pink-500 text-white text-center p-8">
+    <h1 class="text-5xl font-bold">Zeenys Personalization</h1>
+    <p class="text-lg mt-2">Custom Holiday Gifts for Everyone</p>
+  </header>
+
+  <!-- Product Categories Section -->
+  <section class="container mx-auto py-12 px-4 text-center">
+    <h2 class="text-3xl font-semibold mb-8">Holiday Specials</h2>
+    <p class="mb-8 text-gray-600">Browse our holiday-themed products and personalized gifts.</p>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Product Item - T-Shirt -->
+      <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+        <img src="./assets/red tshrt.jpg" alt="T-Shirt Image" class="rounded-t-lg w-full h-40 object-contain">
+        <div class="p-4">
+          <h3 class="text-xl font-bold">T-Shirt</h3>
+          <p class="text-gray-600">$15 and up</p>
+          <button class="mt-3 bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-600">Customize</button>
+        </div>
+      </div>
+      <!-- Product Item - Card -->
+      <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+        <img src="./assets/card.jpg" alt="Card Image" class="rounded-t-lg w-full h-40 object-contain">
+        <div class="p-4">
+          <h3 class="text-xl font-bold">Card</h3>
+          <p class="text-gray-600">$5 and up</p>
+          <button class="mt-3 bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-600">Customize</button>
+        </div>
+      </div>
+      <!-- Product Item - Mask -->
+      <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+        <img src="./assets/mask.jpg" alt="Mask Image" class="rounded-t-lg w-full h-40 object-contain">
+        <div class="p-4">
+          <h3 class="text-xl font-bold">Mask</h3>
+          <p class="text-gray-600">$10 and up</p>
+          <button class="mt-3 bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-600">Customize</button>
+        </div>
+      </div>
+      <!-- Product Item - Glass -->
+      <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+        <img src="./assets/glass.jpg" alt="Glass Image" class="rounded-t-lg w-full h-40 object-contain">
+        <div class="p-4">
+          <h3 class="text-xl font-bold">Glass</h3>
+          <p class="text-gray-600">$12 and up</p>
+          <button class="mt-3 bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-600">Customize</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- The rest of the page content remains the same... -->
+
+    <!-- Featured Reviews Section -->
+    <section class="bg-gray-100 py-12">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl font-semibold mb-6">What Our Customers Say</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <blockquote class="p-6 bg-white rounded-lg shadow-lg">
+              <p class="text-gray-700">“Absolutely love the quality! Perfect for the holiday season.”</p>
+              <cite class="text-gray-500 mt-2">- Emily R.</cite>
+            </blockquote>
+            <!-- Add more reviews as needed -->
+          </div>
+        </div>
+      </section>
+    
+      <!-- Countdown Timer for Holiday Offer -->
+      <section class="bg-pink-100 text-center py-8">
+        <h3 class="text-2xl font-bold mb-2">Holiday Sale Ends In:</h3>
+        <p class="text-lg text-gray-600">Order soon to receive your gifts before Christmas!</p>
+        <div class="text-3xl font-bold text-pink-600 mt-4">00 Days : 00 Hrs : 00 Min : 00 Sec</div>
+      </section>
+    
+      <!-- FAQ Section -->
+      <section class="container mx-auto py-12 px-4">
+        <h2 class="text-3xl font-semibold text-center mb-6">FAQs</h2>
+        <div class="bg-white rounded-lg shadow-lg p-6 max-w-2xl mx-auto">
+          <details class="mb-4">
+            <summary class="text-gray-700">Do you offer custom designs?</summary>
+            <p class="mt-2 text-gray-600">Yes, all of our products can be personalized with names, messages, and designs.</p>
+          </details>
+          <!-- Add more FAQs as needed -->
+        </div>
+      </section>
+    
+      <!-- Newsletter Signup -->
+      <section class="bg-blue-500 text-white py-8">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl font-semibold mb-4">Subscribe for Updates & Discounts</h2>
+          <p class="mb-4">Stay in the loop with our latest holiday offers!</p>
+          <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded text-gray-800">
+          <button class="ml-2 bg-pink-500 py-2 px-6 rounded hover:bg-pink-600">Subscribe</button>
+        </div>
+      </section>
+    
+      <!-- Footer Section with Social Icons -->
+      <footer class="bg-gray-100 text-center p-6">
+        <p class="text-lg mb-4 font-semibold">Connect with Us</p>
+        <div class="flex justify-center space-x-6 text-blue-600">
+          <a href=" https://www.instagram.com/zeenys_personalization
+
+          " class="hover:text-blue-800">
+            <img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" alt="Instagram">
+          </a>
+          <a href="https://wa.me/+14693814041" class="hover:text-blue-800">
+            <img src="https://img.icons8.com/ios-glyphs/30/000000/whatsapp.png" alt="WhatsApp">
+          </a>
+          <a href="mailto:Zeenyspersonal@gmail.com" class="hover:text-blue-800">
+            <img src="https://img.icons8.com/ios-glyphs/30/000000/email.png" alt="Email">
+          </a>
+          <a href="https://www.facebook.com/z.s.jeewani" class="hover:text-blue-800">
+            <img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-new.png" alt="Facebook">
+          </a>
+        </div>
+        <p class="mt-4 text-gray-600">&copy; 2024 Zeenys Personalization</p>
+      </footer>
+    
+      <!-- Countdown Script -->
+      <script>
+        const countdownElement = document.querySelector('.countdown');
+        const countdownDate = new Date("December 24, 2024 23:59:59").getTime();
+    
+        setInterval(() => {
+          let now = new Date().getTime();
+          let distance = countdownDate - now;
+          if (distance < 0) {
+            document.querySelector(".countdown").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+      </script>
+</body>
+</html>
+
+
+
+
+`
