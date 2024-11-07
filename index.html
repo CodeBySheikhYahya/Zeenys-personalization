@@ -6,6 +6,11 @@
   <title>Zeenys Personalization</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
+    /* Holiday Background Theme */
+    body {
+      background: url('https://example.com/your-holiday-background.jpg') no-repeat center center fixed; /* Add your background image URL */
+      background-size: cover;
+    }
     /* Falling Snow Animation */
     .falling-snow {
       position: fixed;
@@ -35,8 +40,8 @@
       left: -60px;
       width: 50px; /* Smaller size */
       height: 50px;
-      border-radius: 50%; /* Circular frame */
-      overflow: hidden; /* Ensures image stays within the circle */
+      border-radius: 50%;
+      overflow: hidden;
       animation: moveReindeer 15s linear infinite;
       z-index: 20;
     }
@@ -76,11 +81,10 @@
    <!-- Top Notification Bar with Enlarged Logo and Rounded Borders -->
   <div class="bg-red-500 text-white p-2 text-center">
     <div class="flex items-center justify-center">
-      <img src="./assets/Screenshot 2024-11-06 192541.png" alt="Logo" class="w-16 h-16 rounded-full border-4 border-white mr-3"> <!-- Larger size with rounded border -->
+      <img src="./assets/Screenshot 2024-11-06 192541.png" alt="Logo" class="w-16 h-16 rounded-full border-4 border-white mr-3">
       <p>🎄 Free Shipping on Orders Over $50! 🎄 Use code HOLIDAY20 for 20% off!</p>
     </div>
   </div>
-
 
   <!-- Hero Section with Banner -->
   <header class="bg-gradient-to-r from-red-500 to-pink-500 text-white text-center p-8">
@@ -88,135 +92,284 @@
     <p class="text-lg mt-2">Custom Holiday Gifts for Everyone</p>
   </header>
 
-  <!-- Product Categories Section -->
-  <section class="container mx-auto py-12 px-4 text-center">
-    <h2 class="text-3xl font-semibold mb-8">Holiday Specials</h2>
-    <p class="mb-8 text-gray-600">Browse our holiday-themed products and personalized gifts.</p>
+  <!-- Product Categories Section with Holiday-Themed Background -->
+<section class="container mx-auto py-12 px-4 text-center bg-white bg-opacity-80 rounded-lg shadow-lg">
+  <h2 class="text-3xl font-semibold mb-8">Holiday Specials</h2>
+  <p class="mb-8 text-gray-600">Browse our holiday-themed products and personalized gifts.</p>
+  
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
     
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      <!-- Product Item - T-Shirt -->
-      <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
-        <img src="./assets/red tshrt.jpg" alt="T-Shirt Image" class="rounded-t-lg w-full h-40 object-contain">
+    <!-- Product Item - T-Shirt -->
+    <div class="bg-red-200 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 border border-red-400">
+      <img src="./assets/red tshrt.jpg" alt="T-Shirt Image" class="rounded-t-lg w-full h-40 object-contain">
+      <div class="p-4">
+        <h3 class="text-xl font-bold">Red T-Shirt</h3>
+        <p class="text-gray-600">$15 and up</p>
+      </div>
+    </div>
+
+    <!-- Product Item - November Diva Birthday Tee -->
+    <div class="bg-gray-200 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 border border-red-400">
+      <img src="./assets/birthday tee.jpg" alt="T-Shirt Image" class="rounded-t-lg w-full h-40 object-contain">
+      <div class="p-4">
+        <h3 class="text-xl font-bold">November Diva Birthday Tee</h3>
+        <p class="text-gray-600">$15 and up</p>
+      </div>
+    </div>
+
+    <!-- Product Item - Water Bottle -->
+    <div class="bg-green-50 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 border border-red-400">
+      <img src="./assets/water-bottle.jpg" alt="T-Shirt Image" class="rounded-t-lg w-full h-40 object-contain">
+      <div class="p-4">
+        <h3 class="text-xl font-bold">Water Bottle</h3>
+        <p class="text-gray-600">$15 and up</p>
+      </div>
+    </div>
+
+    <!-- Product Item - Ornament Dozen -->
+    <div class="bg-gray-50 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 border border-red-400">
+      <img src="./assets/ornament.jpg" alt="T-Shirt Image" class="rounded-t-lg w-full h-40 object-contain">
+      <div class="p-4">
+        <h3 class="text-xl font-bold">Ornament Dozen</h3>
+        <p class="text-gray-600">$20</p>
+      </div>
+    </div>
+
+    <!-- Product Item - Signature Monogram Wine Glasses -->
+    <div class="bg-green-200 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 border border-yellow-400">
+      <img src="./assets/couple glass.jpg" alt="Glass Image" class="rounded-t-lg w-full h-40 object-contain">
+      <div class="p-4">
+        <h3 class="text-xl font-bold">Signature Monogram Wine Glasses</h3>
+        <p class="text-gray-600">$12 and up</p>
+      </div>
+    </div>
+
+    <!-- Product Item - Holiday-Themed Fashion Masks -->
+    <div class="bg-blue-200 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 border border-blue-400">
+      <img src="./assets/mask.jpg" alt="Mask Image" class="rounded-t-lg w-full h-40 object-contain">
+      <div class="p-4">
+        <h3 class="text-xl font-bold">Holiday-Themed Fashion Masks</h3>
+        <p class="text-gray-600">$10 and up</p>
+      </div>
+    </div>
+
+    <!-- Product Item - Balloon Gift Box -->
+    <div class="bg-purple-200 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 border border-yellow-400">
+      <img src="./assets/ballom.jpg" alt="Glass Image" class="rounded-t-lg w-full h-40 object-contain">
+      <div class="p-4">
+        <h3 class="text-xl font-bold">Balloon Gift Box</h3>
+        <p class="text-gray-600">$35 and up</p>
+      </div>
+    </div>
+
+    <!-- Product Item - Statement Mask -->
+    <div class="bg-yellow-50 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 border border-blue-400">
+      <img src="./assets/statement mask.jpg" alt="Mask Image" class="rounded-t-lg w-full h-40 object-contain">
+      <div class="p-4">
+        <h3 class="text-xl font-bold">Statement Mask</h3>
+        <p class="text-gray-600">$10 and up</p>
+      </div>
+    </div>
+
+    <!-- Product Item - Custom Couple Wine Glasses -->
+    <div class="bg-blue-200 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 border border-yellow-400">
+      <img src="./assets/glas.jpg" alt="Glass Image" class="rounded-t-lg w-full h-40 object-contain">
+      <div class="p-4">
+        <h3 class="text-xl font-bold">Custom Couple Wine Glasses</h3>
+        <p class="text-gray-600">$12 and up</p>
+      </div>
+    </div>
+
+    <!-- Product Item - Santa-cam -->
+    <div class="bg-red-700 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 border border-red-400">
+      <img src="./assets/santa-cam.jpg" alt="Santa Cam" class="rounded-t-lg w-full h-40 object-contain">
+      <div class="p-4">
+        <h3 class="text-xl font-bold">Santa Cam</h3>
+        <p class="text-white">$15 and up</p>
+      </div>
+    </div>
+
+
+    <!-- Product Item - PILLOWS-->
+    <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-300 border border-red-400">
+      <img src="./assets/Throw_Pillow_Catalog_Photo_01-1200x900.png" alt="Pillows" class="rounded-t-lg w-full h-40 object-contain">
+      <div class="p-4">
+        <h3 class="text-xl font-bold">Pillows </h3>
+        <p class="text-black">$25 and Up</p>
+      </div>
+    </div>
+
+       <!-- Product Item - santa keychain-->
+       <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-300 border border-red-400">
+        <img src="./assets/keyyyy.jpg" alt="Santa Sleigh Keychain" class="rounded-t-lg w-full h-40 object-contain">
         <div class="p-4">
-          <h3 class="text-xl font-bold">T-Shirt</h3>
-          <p class="text-gray-600">$15 and up</p>
-          <button class="mt-3 bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-600">Customize</button>
+          <h3 class="text-xl font-bold">Santa Sleigh Keychain </h3>
+          <p class="text-black">$12</p>
         </div>
       </div>
-      <!-- Product Item - Card -->
-      <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
-        <img src="./assets/card.jpg" alt="Card Image" class="rounded-t-lg w-full h-40 object-contain">
+
+       <!-- Product Item - thankyou card-->
+       <div class="bg-pink-200 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 border border-red-400">
+        <img src="./assets/thankyiu.jpg" alt="Thanks & Smiles Card" class="rounded-t-lg w-full h-40 object-contain">
         <div class="p-4">
-          <h3 class="text-xl font-bold">Card</h3>
-          <p class="text-gray-600">$5 and up</p>
-          <button class="mt-3 bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-600">Customize</button>
+          <h3 class="text-xl font-bold">Thanks & Smiles Card </h3>
+          <p class="text-black">25$ for dozen</p>
         </div>
       </div>
-      <!-- Product Item - Mask -->
-      <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
-        <img src="./assets/mask.jpg" alt="Mask Image" class="rounded-t-lg w-full h-40 object-contain">
+
+      <!-- Product Item - wedding card-->
+      <div class="bg-pink-200 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 border border-red-400">
+        <img src="./assets/wedding.jpg" alt="Ever After Wedding Card" class="rounded-t-lg w-full h-40 object-contain">
         <div class="p-4">
-          <h3 class="text-xl font-bold">Mask</h3>
-          <p class="text-gray-600">$10 and up</p>
-          <button class="mt-3 bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-600">Customize</button>
+          <h3 class="text-xl font-bold">Ever After Wedding Card </h3>
+          <p class="text-black">25$ for dozen</p>
         </div>
       </div>
-      <!-- Product Item - Glass -->
-      <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
-        <img src="./assets/glass.jpg" alt="Glass Image" class="rounded-t-lg w-full h-40 object-contain">
+
+       <!-- Product Item - Tumblers -->
+       <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-300 border border-red-400">
+        <img src="./assets/Personalized-logo-skinny-tumbler__28543.jpg" alt="The Trendy Tumbler" class="rounded-t-lg w-full h-40 object-contain">
         <div class="p-4">
-          <h3 class="text-xl font-bold">Glass</h3>
-          <p class="text-gray-600">$12 and up</p>
-          <button class="mt-3 bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-600">Customize</button>
+          <h3 class="text-xl font-bold">The Trendy Tumbler </h3>
+          <p class="text-black">20$ and Up</p>
         </div>
+      </div>
+
+
+        <!-- Product Item - pencil and lunch box -->
+        <div class="bg-pink-200 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 border border-red-400">
+          <img src="./assets/images (1).jpeg" alt="Pencil & Plate" class="rounded-t-lg w-full h-40 object-contain">
+          <div class="p-4">
+            <h3 class="text-xl font-bold">Pencil & Plate</h3>
+            <p class="text-black">15$</p>
+          </div>
+        </div>
+
+        <!-- Product Item -Prestige Plaques -->
+        <div class="bg-green-300 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 border border-red-400">
+          <img src="./assets/images (2).jpeg" alt="Prestige Plaques" class="rounded-t-lg w-full h-40 object-contain">
+          <div class="p-4">
+            <h3 class="text-xl font-bold">Prestige Plaques</h3>
+            <p class="text-black">35$</p>
+          </div>
+        </div>
+
+
+  </div>
+</section>
+
+
+ 
+
+  <!-- Featured Reviews Section -->
+  <section class="bg-gray-100 py-12 bg-opacity-90">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-6">What Our Customers Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <blockquote class="p-6 bg-white rounded-lg shadow-lg">
+          <p class="text-gray-700">“Absolutely love the quality! Perfect for the holiday season.”</p>
+          <cite class="text-gray-500 mt-2">- Emily R.</cite>
+        </blockquote>
+
+        <blockquote class="p-6 bg-white rounded-lg shadow-lg">
+          <p class="text-gray-700">“Beautifully packaged and wonderful products.”</p>
+          <cite class="text-gray-500 mt-2">- John D., Dallas, TX</cite>
+        </blockquote>
+
+        <blockquote class="p-6 bg-white rounded-lg shadow-lg">
+          <p class="text-gray-700">“The best holiday gift shop! Unique items and great quality.”</p>
+          <cite class="text-gray-500 mt-2">- Sarah M., Dallas, TX</cite>
+        </blockquote>
+
+        <blockquote class="p-6 bg-white rounded-lg shadow-lg">
+          <p class="text-gray-700">“Fast delivery and great service. Highly recommended!”</p>
+          <cite class="text-gray-500 mt-2">- Maria T., Dallas, TX</cite>
+        </blockquote>
+
+        <blockquote class="p-6 bg-white rounded-lg shadow-lg">
+          <p class="text-gray-700">“Love the attention to detail. Perfect holiday gifts!”</p>
+          <cite class="text-gray-500 mt-2">- James P., Dallas, TX</cite>
+        </blockquote>
+
       </div>
     </div>
   </section>
 
-   <!-- The rest of the page content remains the same... -->
+  <!-- Countdown Timer for Holiday Offer -->
+  <section class="bg-pink-100 text-center py-8">
+    <h3 class="text-2xl font-bold mb-2">Holiday Sale Ends In:</h3>
+    <p class="text-lg text-gray-600">Order soon to receive your gifts before Christmas!</p>
+    <div class="text-3xl font-bold text-pink-600 mt-4 countdown">00 Days : 00 Hrs : 00 Min : 00 Sec</div>
+  </section>
 
-    <!-- Featured Reviews Section -->
-    <section class="bg-gray-100 py-12">
-        <div class="container mx-auto text-center">
-          <h2 class="text-3xl font-semibold mb-6">What Our Customers Say</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <blockquote class="p-6 bg-white rounded-lg shadow-lg">
-              <p class="text-gray-700">“Absolutely love the quality! Perfect for the holiday season.”</p>
-              <cite class="text-gray-500 mt-2">- Emily R.</cite>
-            </blockquote>
-            <!-- Add more reviews as needed -->
-          </div>
-        </div>
-      </section>
-    
-      <!-- Countdown Timer for Holiday Offer -->
-      <section class="bg-pink-100 text-center py-8">
-        <h3 class="text-2xl font-bold mb-2">Holiday Sale Ends In:</h3>
-        <p class="text-lg text-gray-600">Order soon to receive your gifts before Christmas!</p>
-        <div class="text-3xl font-bold text-pink-600 mt-4">00 Days : 00 Hrs : 00 Min : 00 Sec</div>
-      </section>
-    
-      <!-- FAQ Section -->
-      <section class="container mx-auto py-12 px-4">
-        <h2 class="text-3xl font-semibold text-center mb-6">FAQs</h2>
-        <div class="bg-white rounded-lg shadow-lg p-6 max-w-2xl mx-auto">
-          <details class="mb-4">
-            <summary class="text-gray-700">Do you offer custom designs?</summary>
-            <p class="mt-2 text-gray-600">Yes, all of our products can be personalized with names, messages, and designs.</p>
-          </details>
-          <!-- Add more FAQs as needed -->
-        </div>
-      </section>
-    
-      <!-- Newsletter Signup -->
-      <section class="bg-blue-500 text-white py-8">
-        <div class="container mx-auto text-center">
-          <h2 class="text-3xl font-semibold mb-4">Subscribe for Updates & Discounts</h2>
-          <p class="mb-4">Stay in the loop with our latest holiday offers!</p>
-          <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded text-gray-800">
-          <button class="ml-2 bg-pink-500 py-2 px-6 rounded hover:bg-pink-600">Subscribe</button>
-        </div>
-      </section>
-    
-      <!-- Footer Section with Social Icons -->
-      <footer class="bg-gray-100 text-center p-6">
-        <p class="text-lg mb-4 font-semibold">Connect with Us</p>
-        <div class="flex justify-center space-x-6 text-blue-600">
-          <a href=" https://www.instagram.com/zeenys_personalization
+  <!-- FAQ Section -->
+  <section class="container mx-auto py-12 px-4 bg-white bg-opacity-80 rounded-lg shadow-lg">
+    <h2 class="text-3xl font-semibold text-center mb-6">FAQs</h2>
+    <div class="bg-white rounded-lg shadow-lg p-6 max-w-2xl mx-auto">
+      <details class="mb-4">
+        <summary class="text-gray-700">Do you offer custom designs?</summary>
+        <p class="mt-2 text-gray-600">Yes, all of our products can be personalized with names, messages, and designs.</p>
+      </details>
+    </div>
+  </section>
 
-          " class="hover:text-blue-800">
-            <img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" alt="Instagram">
-          </a>
-          <a href="https://wa.me/+14693814041" class="hover:text-blue-800">
-            <img src="https://img.icons8.com/ios-glyphs/30/000000/whatsapp.png" alt="WhatsApp">
-          </a>
-          <a href="mailto:Zeenyspersonal@gmail.com" class="hover:text-blue-800">
-            <img src="https://img.icons8.com/ios-glyphs/30/000000/email.png" alt="Email">
-          </a>
-          <a href="https://www.facebook.com/z.s.jeewani" class="hover:text-blue-800">
-            <img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-new.png" alt="Facebook">
-          </a>
-        </div>
-        <p class="mt-4 text-gray-600">&copy; 2024 Zeenys Personalization</p>
-      </footer>
-    
-      <!-- Countdown Script -->
-      <script>
-        const countdownElement = document.querySelector('.countdown');
-        const countdownDate = new Date("December 24, 2024 23:59:59").getTime();
-    
-        setInterval(() => {
-          let now = new Date().getTime();
-          let distance = countdownDate - now;
-          if (distance < 0) {
-            document.querySelector(".countdown").innerHTML = "EXPIRED";
-          }
-        }, 1000);
-      </script>
+   <!-- Newsletter Signup -->
+   <section class="bg-blue-500 text-white py-8">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-4">Subscribe for Updates & Discounts</h2>
+      <p class="mb-4">Stay in the loop with our latest holiday offers!</p>
+      <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded text-gray-800">
+      <button class="ml-2 bg-pink-500 py-2 px-6 rounded hover:bg-pink-600">Subscribe</button>
+    </div>
+  </section>
+
+   <!-- Footer Section with Social Icons -->
+   <footer class="bg-gray-100 text-center p-6">
+    <p class="text-lg mb-4 font-semibold">Connect with Us</p>
+    <div class="flex justify-center space-x-6 text-blue-600">
+      <a href=" https://www.instagram.com/zeenys_personalization
+
+      " class="hover:text-blue-800">
+        <img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" alt="Instagram">
+      </a>
+      <a href="https://wa.me/+14693814041" class="hover:text-blue-800">
+        <img src="https://img.icons8.com/ios-glyphs/30/000000/whatsapp.png" alt="WhatsApp">
+      </a>
+      <a href="mailto:Zeenyspersonal@gmail.com" class="hover:text-blue-800">
+        <img src="https://img.icons8.com/ios-glyphs/30/000000/email.png" alt="Email">
+      </a>
+      <a href="https://www.facebook.com/z.s.jeewani" class="hover:text-blue-800">
+        <img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-new.png" alt="Facebook">
+      </a>
+    </div>
+    <p class="mt-4 text-gray-600">&copy; 2024 Zeenys Personalization</p>
+  </footer>
+
+  <script>
+    // Countdown Timer Script
+    function startCountdown(endDate) {
+      const countdownElement = document.querySelector('.countdown');
+      const timer = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = endDate - now;
+        if (distance < 0) {
+          clearInterval(timer);
+          countdownElement.innerHTML = "Offer has ended!";
+        } else {
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          countdownElement.innerHTML = `${days} Days : ${hours} Hrs : ${minutes} Min : ${seconds} Sec`;
+        }
+      }, 1000);
+    }
+    const holidayEndDate = new Date('December 25, 2024 23:59:59').getTime();
+    startCountdown(holidayEndDate);
+  </script>
+
+
 </body>
 </html>
+  
 
-
-
-
-`
